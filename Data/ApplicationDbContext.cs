@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using OnlineBookRazorPagesApp.Model;
 
 namespace OnlineBookRazorPagesApp.Data{
-    class ApplicationDbContext:DbContext{
+    public class ApplicationDbContext:DbContext{
      public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){
 
      }

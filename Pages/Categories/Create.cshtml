@@ -1,0 +1,34 @@
+@page
+@model OnlineBookRazorPagesApp.Pages.Categories.CreateModel
+<div class="container p-5">
+    <h2>Add new Category</h2>
+    <form method="post" class="p-5">
+        <div class="row">
+            <label asp-for="category.Name" class="mb-3"></label>
+            <input asp-for="category.Name"  type="text" class="form-control mb-3" />
+            <span asp-validation-for="category.Name" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <label asp-for="category.DisplayOrder"  class="mb-3"></label>
+            <input asp-for="category.DisplayOrder" class="form-control mb-3" />
+            <span asp-validation-for="category.DisplayOrder" class="text-danger"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <a asp-page="/Categories/Create" ><button type="submit" class="btn btn-primary mb-3 form-control">Add new Category</button></a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-page="/Categories/Index" class="btn btn-outline-primary form-control">Back to
+                    List</a>
+            </div>
+
+        </div>
+
+
+    </form>
+</div>
+
+@section scripts{
+   <partial name="_ValidationScriptsPartial"/>
+}
